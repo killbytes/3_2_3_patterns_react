@@ -5,7 +5,7 @@
 
 .app__title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .app-loader,
@@ -14,4 +14,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.launch-modal {
+  text-align: center;
+}
+
+.launch-modal__image {
+  display: block;
+
+  width: 200px;
+  height: 200px;
+
+  object-fit: contain;
+
+  margin: 0 auto 24px;
+}
+
+.launch-modal__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.launch-modal__descr {
+  color: grey;
 }

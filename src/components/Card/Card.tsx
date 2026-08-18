@@ -4,9 +4,10 @@ import styles from './Card.module.scss';
 
 type CardProps = {
     launch: CardItem;
+    onSeeMore: (launch: CardItem) => void;
 };
 
-export const Card = ({launch}: CardProps) => {
+export const Card = ({launch, onSeeMore}: CardProps ) => {
     return (
         <MantineCard
             shadow="sm"
@@ -43,6 +44,7 @@ export const Card = ({launch}: CardProps) => {
                 fullWidth
                 size="md"
                 className={styles.button}
+                onClick={() => onSeeMore(launch)}
             >
                 See more
             </Button>
