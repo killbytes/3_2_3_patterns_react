@@ -45,6 +45,7 @@ export const Card = ({launch, onSeeMore}: CardProps ) => {
                 size="md"
                 className={styles.button}
                 onClick={() => onSeeMore(launch)}
+                aria-label={`seemore`}
             >
                 See more
             </Button>

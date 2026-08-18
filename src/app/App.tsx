@@ -1,11 +1,9 @@
-import {useEffect, useReducer, useState} from 'react';
+import { useEffect, useReducer } from 'react';
 import { Container, Loader, SimpleGrid, Text, Title } from '@mantine/core';
 import { Card } from '@/components/Card/Card';
 import type { CardItem, LaunchesResponse } from '@/shared/types/CardItem';
 import './App.scss';
 import { Modal } from '@/components/Modal/Modal';
-
-const API_URL = 'https://kata-spacex.onrender.com/api/launches';
 
 type State = {
     isLoading: boolean;
@@ -85,7 +83,7 @@ function App() {
             dispatch({ type: 'request' });
 
             try {
-                const response = await fetch(API_URL);
+                const response = await fetch('https://kata-spacex.onrender.com/api/launches');
 
                 if (!response.ok) {
                     throw new Error(`HTTP error: ${response.status}`);
@@ -133,7 +131,7 @@ function App() {
     if (state.isLoading) {
         return (
             <div className="app-loader">
-                <Loader size="lg" />
+                <Loader size="lg" data-testid="app-loader" />
             </div>
         );
     }
