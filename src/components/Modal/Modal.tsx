@@ -35,7 +35,7 @@ export const Modal = ({ children, onClose }: ModalProps) => {
 
     return createPortal(
         <>
-            <div className={styles.modal} role="dialog" и aria-modal="true">
+            <div className={styles.modal} role="dialog" aria-modal="true">
                 <button
                     type="button"
                     className={styles.close}
